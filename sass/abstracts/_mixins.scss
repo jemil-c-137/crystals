@@ -1,0 +1,13 @@
+@mixin shadow-before($color) {
+  ::before {
+    background: $color;
+    content: '';
+    display: inline-block;
+    position: absolute;
+    top: 20%;
+    left: -6rem;
+    width: 3.2rem;
+    height: 3.2rem;
+    filter: blur(10px);
+  }
+}
