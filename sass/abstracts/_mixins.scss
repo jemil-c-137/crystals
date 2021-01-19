@@ -11,3 +11,47 @@
     filter: blur(10px);
   }
 }
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == tab-land {
+    @media only screen and (max-width: 75em) {
+      // 1200px == 75em (1200px/16px)
+      @content;
+    }
+  }
+
+  @if $breakpoint == tab-medium {
+    @media only screen and (max-width: 64em) {
+      // 1024px == 64em (1024px/16px)
+      @content;
+    }
+  }
+
+  @if $breakpoint == tab-port {
+    @media only screen and (max-width: 56.25em) {
+      // 900px == 64em (900px/16px)
+      @content;
+    }
+  }
+
+  @if $breakpoint == tab-small {
+    @media only screen and (max-width: 48em) {
+      // 900px == 64em (900px/16px)
+      @content;
+    }
+  }
+
+  @if $breakpoint == mobile-big {
+    @media only  screen and (max-width: 36em) { // 575px == 36em
+      @content;
+    }
+  }
+
+
+  @if $breakpoint == phone {
+    @media only screen and (max-width: 23.5em) {
+      // 375px == 23.43em
+      @content;
+    }
+  }
+}

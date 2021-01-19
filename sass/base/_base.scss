@@ -27,6 +27,10 @@ html {
     font-size: 35%;
   }
 
+  @media only  screen and (max-width: 23.5em) { // 375px == 23.43em
+    font-size: 30%;
+  }
+
 
   
 }

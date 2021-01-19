@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="fonts/fonts.css" />
     <link rel="stylesheet" href="css/main.min.css" />
     <title>Crystals</title>
@@ -49,10 +50,10 @@
             </p>
             <button class="btn btn--rectangle">shop all</button>
           </div>
-  
+
           <div class="about__slider">
             <div class="about__circle"></div>
-  
+
             <img src="img/malachite.png" alt="" />
             <div class="slider__controls">
               <div class="slider__select">&nbsp;</div>
@@ -60,39 +61,37 @@
               <div class="slider__select">&nbsp;</div>
             </div>
           </div>
-        </section>
-  
-        <section class="section-subscribe">
-          <div class="subscribe-box">
-            <div class="subscribe-box__image-box">
-               <img src="img/crystal-sub.png" alt="crystal picture"> 
-              <button class="btn btn--rectangle btn--white">Subscribe and save</button>
+        </div>
+      </section>
+
+      <section class="section-subscribe">
+        <div class="subscribe-box">
+          <div class="subscribe-box__image-box">
+            <img src="img/crystal-sub.png" alt="crystal picture" />
+            <button class="btn btn--rectangle btn--white">Subscribe and save</button>
+          </div>
+          <div class="subscribe-box__reviews">
+            <div class="subscribe-box__review">
+              “Somehow, they always know exactly what gems I need! They are the perfect size and always look beautiful.”
+
+              <p class="subscribe-box__review-author">Hanna w.</p>
+              <p class="subscribe-box__review-bottom-icon">&nbsp;</p>
             </div>
-            <div class="subscribe-box__reviews">
-              <div class="subscribe-box__review">
-                “Somehow, they always know exactly what gems I need! They are the perfect size and always look beautiful.”
-  
-                <p class="subscribe-box__review-author">Hanna w.</p>
-                <p class="subscribe-box__review-bottom-icon">&nbsp;</p>
-              </div>
-              <div class="subscribe-box__review">
-                “Awesome! Fast delivery and great products. I love the informative card included.”
-  
-                <p class="subscribe-box__review-author">Stefanie S.</p>
-                <p class="subscribe-box__reviewbottom-iconr">&nbsp;</p>
-              </div>
-              <div class="subscribe-box__review">
-                "The product was beautiful. Will definitely order more items."
-  
-                <p class="subscribe-box__review-author">David O.</p>
-                <p class="subscribe-box__review-bottom-icon">&nbsp;</p>
-              </div>
+            <div class="subscribe-box__review">
+              “Awesome! Fast delivery and great products. I love the informative card included.”
+
+              <p class="subscribe-box__review-author">Stefanie S.</p>
+              <p class="subscribe-box__reviewbottom-iconr">&nbsp;</p>
+            </div>
+            <div class="subscribe-box__review">
+              "The product was beautiful. Will definitely order more items."
+
+              <p class="subscribe-box__review-author">David O.</p>
+              <p class="subscribe-box__review-bottom-icon">&nbsp;</p>
             </div>
           </div>
         </div>
-        
       </section>
-
       <section class="section-populars">
         <div class="populars">
           <div class="populars__items-list">
@@ -218,13 +217,63 @@
       <section class="section-gallery">
         <div class="gallery">
           <p class="gallery__copyright">@crystals.com #crystalsdotcom</p>
-          <div class="gallery__box">
-            <img src="img/gallery-1.png" alt="Gallery image" class="gallery__image" />
-            <img src="img/gallery-2.png" alt="Gallery image" class="gallery__image" />
-            <img src="img/gallery-3.png" alt="Gallery image" class="gallery__image" />
-            <img src="img/gallery-4.png" alt="Gallery image" class="gallery__image" />
-            <img src="img/gallery-5.png" alt="Gallery image" class="gallery__image" />
-            <img src="img/gallery-6.png" alt="Gallery image" class="gallery__image" />
+          <!-- <div class="gallery__box">
+            <div class="gallery__image-wrapper">
+              <img src="img/gallery-1.png" alt="Gallery image" class="gallery__image" />
+            </div>
+            <div class="gallery__image-wrapper">
+              <img src="img/gallery-2.png" alt="Gallery image" class="gallery__image" />
+            </div>
+            <div class="gallery__image-wrapper">
+              <img src="img/gallery-3.png" alt="Gallery image" class="gallery__image" />
+            </div>
+            <div class="gallery__image-wrapper">
+              <img src="img/gallery-4.png" alt="Gallery image" class="gallery__image" />
+            </div>
+            <div class="gallery__image-wrapper">
+              <img src="img/gallery-5.png" alt="Gallery image" class="gallery__image" />
+            </div>
+            <div class="gallery__image-wrapper">
+              <img src="img/gallery-6.png" alt="Gallery image" class="gallery__image" />
+            </div>
+          </div> -->
+
+          <div class="gallery__box swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="gallery__image-wrapper">
+                  <img src="img/gallery-1.png" alt="Gallery image" class="gallery__image" />
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="gallery__image-wrapper">
+                  <img src="img/gallery-2.png" alt="Gallery image" class="gallery__image" />
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="gallery__image-wrapper">
+                  <img src="img/gallery-3.png" alt="Gallery image" class="gallery__image" />
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="gallery__image-wrapper">
+                  <img src="img/gallery-4.png" alt="Gallery image" class="gallery__image" />
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="gallery__image-wrapper">
+                  <img src="img/gallery-5.png" alt="Gallery image" class="gallery__image" />
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="gallery__image-wrapper">
+                  <img src="img/gallery-6.png" alt="Gallery image" class="gallery__image" />
+                </div>
+              </div>
+              <div class="swiper-slide"></div>
+            </div>
           </div>
         </div>
       </section>
@@ -263,5 +312,8 @@
         </div>
       </div>
     </div>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="js/script.js"></script>
   </body>
 </html>

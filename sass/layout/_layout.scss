@@ -38,10 +38,14 @@
 
   // TITLE
   &__text {
-    font-size: $default-font-size;
+    font-size: 1.6rem;
     text-align: center;
     text-transform: uppercase;
     font-weight: 500;
+
+    @include respond(tab-small) {
+      font-size: 2.2rem;
+    }
   }
 
   // BTNS
@@ -71,6 +75,10 @@
 
     font-family: 'Libre Calson';
     font-weight: 100;
+
+    @include respond(mobile-big) {
+      font-size: 9rem;
+    }
   }
 }
 
@@ -86,6 +94,11 @@
   cursor: pointer;
   transition: all 0.2s;
   backface-visibility: hidden;
+
+  @include respond(phone) {
+    font-size: 2.4rem;
+    line-height: 1;
+  }
 
   &:hover {
     transform: translateY(-0.5rem);
@@ -165,8 +178,7 @@
   width: 95%;
   margin: 0 auto;
 
-  @media only screen and (max-width: 35.93em) {
-    // 575px == 35.93em
+  @include respond(mobile-big) {
     flex-direction: column;
   }
 
@@ -175,10 +187,14 @@
     padding: 12.9rem 10.6rem 12.9rem;
     border-right: 0.5px solid #f6e4e3;
 
-    @media only screen and (max-width: 35.93em) {
-      // 575px == 35.93em
+    @include respond(mobile-big) {
       width: 100%;
       text-align: center;
+      border-right: none;
+    }
+
+    @include respond(phone) {
+      padding: 7rem 5rem 7rem 5rem;
     }
   }
 
@@ -188,15 +204,19 @@
     font-family: 'Libre Calson';
     margin-bottom: 10rem;
 
-    @media only screen and (max-width: 48em) {
-      //
+    @include respond(tab-small) {
       font-size: 4rem;
       line-height: 4.4rem;
     }
 
-    @media only screen and (max-width: 35.93em) {
-      // 575px == 35.93em
+    @include respond(mobile-big) {
       margin-bottom: 4rem;
+    }
+
+    @include respond(phone) {
+      font-size: 5rem;
+      max-width: 80%;
+      margin: 0 auto 7rem auto;
     }
   }
 
@@ -207,6 +227,10 @@
     height: fit-content;
     position: relative;
 
+    @include respond(mobile-big) {
+      border-left: none;
+    }
+
     img {
       width: 100%;
       margin: 0 auto;
@@ -214,14 +238,16 @@
       position: relative;
       z-index: 100;
 
-      @media only screen and (max-width: 56.25em) {
-        //
+      @include respond(tab-port) {
         width: 70%;
+      }
+
+      @include respond(phone) {
+        width: 100%;
       }
     }
 
-    @media only screen and (max-width: 35.93em) {
-      // 575px == 35.93em
+    @include respond(mobile-big) {
       margin: 0 auto;
     }
   }
@@ -237,11 +263,10 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-  }
 
-  @media only screen and (max-width: 35.93em) {
-    // 575px == 35.93em
-    flex-direction: 50%;
+    @include respond(mobile-big) {
+      background-color: transparent;
+    }
   }
 }
 
@@ -273,6 +298,10 @@
 .section-subscribe {
   padding: 19.4rem 0 15.4rem 0;
   border-bottom: 1px solid $color-primary;
+
+  @include respond(phone) {
+    padding: 5rem 0;
+  }
 }
 
 .subscribe-box {
@@ -280,11 +309,20 @@
   align-items: center;
   width: 85%;
   margin: 0 auto;
+
+  @include respond(phone) {
+    flex-direction: column;
+  }
+
   &__image-box {
     width: 50%;
     text-align: center;
 
     position: relative;
+
+    @include respond(phone) {
+      width: 100%;
+    }
 
     img {
       width: 100%;
@@ -316,8 +354,7 @@
     line-height: 2.4rem;
     max-width: 23.2rem;
 
-    @media only screen and (max-width: 35.93em) {
-      // 575px == 35.93em
+    @include respond(mobile-big) {
       font-size: 2.2rem;
     }
   }
@@ -329,8 +366,7 @@
     line-height: 1.6rem;
     margin-bottom: 2rem;
 
-    @media only screen and (max-width: 35.93em) {
-      // 575px == 35.93em
+    @include respond(mobile-big) {
       font-size: 2rem;
     }
   }
@@ -349,23 +385,20 @@
   padding: 16rem 13rem 16rem 10rem;
   position: relative;
 
-  @media only screen and (max-width: 56.25em) {
-    // 1024px == 64em (1024px/16px)
-    padding: 16rem 0;
+  @include respond(tab-port) {
+    padding: 10rem 0;
   }
 }
 
 .populars {
   display: flex;
 
-  @media only screen and (max-width: 56.25em) {
-    // 1024px == 64em (1024px/16px)
+  @include respond(tab-port) {
     width: 85%;
     margin: 0 auto;
   }
 
-  @media only screen and (max-width: 35.93em) {
-    // 575px == 35.93em
+  @include respond(mobile-big) {
     flex-direction: column;
   }
 
@@ -373,8 +406,8 @@
     width: 60%;
     display: flex;
 
-    @media only screen and (max-width: 35.93em) {
-      width: 100%;// 575px == 35.93em
+    @include respond(mobile-big) {
+      width: 100%;
       margin: 0 auto;
       display: flex;
       justify-content: space-around;
@@ -426,20 +459,25 @@
     text-transform: uppercase;
     font-family: 'Basis Grotesque';
     margin-bottom: 2.2rem;
+
+    @include respond(phone) {
+      font-size: 3rem;
+    }
   }
 
   &__items-list {
     width: 40%;
 
-    @media only screen and (max-width: 35.93em) {
+    @include respond(mobile-big) {
       width: 100%;
-      margin: 0 auto;
+      margin: 0 auto 5rem auto;
+      text-align: center;
     }
 
     ul {
       list-style: none;
 
-      @media only screen and (max-width: 35.93em) {
+      @include respond(mobile-big) {
         display: grid;
         grid-template-columns: repeat(2, 45%);
         justify-items: center;
@@ -520,9 +558,6 @@
 }
 
 .shop {
-  &__container {
-  }
-
   &__title {
     margin-top: 9.8rem;
     font-size: 4.7rem;
@@ -539,10 +574,14 @@
       width: 90%;
       justify-content: space-between;
 
-      @media only screen and (max-width: 768px) {
+      @include respond(tab-small) {
         display: grid;
         width: 50%;
         grid-template-columns: repeat(2, 33%);
+      }
+
+      @include respond(phone) {
+        width: 75%;
       }
     }
   }
@@ -554,12 +593,20 @@
       text-align: center;
       font-size: 1.6rem;
       font-family: 'Basis Grotesque';
+
+      @include respond(phone) {
+        font-size: 2.2rem;
+      }
     }
   }
 
   &__item {
     position: relative;
     margin-right: 1.2rem;
+
+    @include respond(tab-small) {
+      margin-bottom: 3rem;
+    }
 
     &:last-child {
       grid-column: span 2;
@@ -613,12 +660,20 @@
     ul {
       display: flex;
       justify-content: space-between;
+
+      @include respond(phone) {
+        flex-direction: column;
+      }
     }
   }
 
   &__item {
     &:not(:last-child) {
       margin-right: 1.2rem;
+
+      @include respond(phone) {
+        margin-bottom: 3rem;
+      }
     }
   }
 
@@ -637,6 +692,10 @@
   &__item-description {
     font-size: 1.5rem;
     line-height: 2.4rem;
+
+    @include respond(phone) {
+      font-size: 3rem;
+    }
   }
 }
 
@@ -653,8 +712,7 @@
   display: flex;
   justify-content: space-between;
 
-  @media only screen and (max-width: 48em) {
-    //
+  @include respond(tab-small) {
     flex-direction: column-reverse;
   }
 
@@ -662,8 +720,7 @@
     width: 22%;
     margin: 0;
 
-    @media only screen and (max-width: 48em) {
-      //
+    @include respond(tab-small) {
       width: 100%;
       text-align: center;
       margin-top: 4rem;
@@ -675,6 +732,10 @@
     line-height: 5.6rem;
     font-family: $font-primary;
     margin-bottom: 2.4rem;
+
+    @include respond(phone) {
+      font-size: 5.2rem;
+    }
   }
 
   &__text {
@@ -682,6 +743,11 @@
     line-height: 2.4rem;
     font-family: $font-secondary;
     margin-bottom: 3.8rem;
+
+    @include respond(phone) {
+      font-size: 2.4rem;
+      line-height: 1.4;
+    }
   }
 
   &__gallery {
@@ -691,8 +757,7 @@
     width: 75%;
     max-width: 75%;
 
-    @media only screen and (max-width: 48em) {
-      //
+    @include respond(tab-small) {
       width: 100%;
       max-width: 100%;
       text-align: center;
@@ -725,8 +790,7 @@
   width: 95%;
   margin: 0 auto;
 
-  @media only screen and (max-width: 48em) {
-    //
+  @include respond(tab-small) {
     flex-direction: column;
     height: fit-content;
 
@@ -763,11 +827,10 @@
 
     margin-bottom: 3rem;
 
-    @media only screen and (max-width: 48em) {
+    @include respond(tab-small) {
       font-size: 3rem;
     }
   }
-
   &__author {
     font-size: 1.6rem;
     line-height: 1;
@@ -791,8 +854,8 @@
   margin: 0 auto;
   &__box {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
+    min-width: 0;
   }
 
   &__copyright {
@@ -802,7 +865,68 @@
     text-transform: uppercase;
     margin-bottom: 2.6rem;
   }
+
+  &__image-wrapper {
+    &:not(:last-child) {
+      margin-right: 2rem;
+    }
+  }
+
+  &__image {
+    max-width: 100%;
+
+    @include respond(phone) {
+      width: auto;
+      margin-right: 3rem;
+      scroll-snap-align: center;
+    }
+  }
 }
+
+
+// .gallery {
+//   width: 95%;
+//   margin: 0 auto;
+//   &__box {
+//     display: flex;
+//     justify-content: space-between;
+    
+
+//     @include respond(phone) {
+//       width: auto;
+//       overflow-x: auto;
+//       scroll-snap-type: x mandatory;
+
+//       &::-webkit-scrollbar {
+//         width: 0;
+//       }
+//     }
+//   }
+
+//   &__copyright {
+//     font-size: 1.6rem;
+//     letter-spacing: 1px;
+//     font-family: $font-secondary;
+//     text-transform: uppercase;
+//     margin-bottom: 2.6rem;
+//   }
+
+//   &__image-wrapper {
+//     &:not(:last-child) {
+//       margin-right: 2rem;
+//     }
+//   }
+
+//   &__image {
+//     width: 100%;
+
+//     @include respond(phone) {
+//       width: auto;
+//       margin-right: 3rem;
+//       scroll-snap-align: center;
+//     }
+//   }
+// }
 
 .bottom-text-line img {
   margin: 8rem auto 10.8rem auto;
@@ -824,6 +948,17 @@
       width: 65%;
       row-gap: 2.8rem;
       grid-template-columns: repeat(5, 1fr);
+
+      @media only screen and (max-width: 35.93em) {
+      }
+
+      @include respond(mobile-big) {
+        grid-template-columns: repeat(2, minmax(35%, max-content));
+      }
+
+      @include respond(phone) {
+        width: 100%;
+      }
     }
   }
 
@@ -832,12 +967,26 @@
     font-size: 1.6rem;
     font-family: $font-secondary;
     margin-right: 2rem;
+
+
+    @include respond(mobile-big) {
+      font-size: 2rem;
+    }
+
+    @include respond(phone) {
+      font-size: 3rem;
+    }
+
   }
   &__copyrights {
     font-size: 1.2rem;
     line-height: 2.4rem;
     font-family: $font-secondary;
     margin-bottom: 7.6rem;
+
+    @include respond(mobile-big) {
+      font-size: 2rem;
+    }
   }
 
   &__bg-circles {
