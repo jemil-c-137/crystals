@@ -153,6 +153,8 @@
   border-bottom: 1px solid $color-primary;
   overflow: hidden;
 
+  transition: all .2s;
+
   span {
     display: inline-block;
     letter-spacing: 1px;
@@ -167,6 +169,7 @@
   span:hover {
     background-image: url(../img/gradient-bg.png);
     background-size: 130%;
+    background-position: 20%;
     -webkit-background-clip: text;
     color: transparent;
     width: fit-content;
